@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flight status</title>
+  <style>
+    .bg-cp{
+        background-color: #d3d6db;
+      }
+  </style>
+  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+    <div class="container-fluid">
+      <div class="navbar-brand ">
+        <a class="navbar-brand" href="index.html">AeroFly</a>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-airplane  mr-2" viewBox="0 0 16 16">
+        <path d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849m.894.448C7.111 2.02 7 2.569 7 3v4a.5.5 0 0 1-.276.447l-5.448 2.724a.5.5 0 0 0-.276.447v.792l5.418-.903a.5.5 0 0 1 .575.41l.5 3a.5.5 0 0 1-.14.437L6.708 15h2.586l-.647-.646a.5.5 0 0 1-.14-.436l.5-3a.5.5 0 0 1 .576-.411L15 11.41v-.792a.5.5 0 0 0-.276-.447L9.276 7.447A.5.5 0 0 1 9 7V3c0-.432-.11-.979-.322-1.401C8.458 1.159 8.213 1 8 1s-.458.158-.678.599"/>
+      </svg>
+    </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="booking.html">Booking</a>
+          </li>
+    
+          <li class="nav-item">
+            <a class="nav-link" href="signin.html">Sign in</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="contactus.html">Contact us</a>
+          </li>
+          <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Manage Bookings
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="flightstatus.html">Flight Status</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+              
+            </ul>
+        </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search Flights" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>Online Flight Booking</h1>
+    <p>Book Flight Ticket</p>
+  </div>
+  
+  <div class="position-relative">
+    <img src="Images/Booking wallpaper.jpg" alt="" class="img-fluid  d-xl-block">
+    <div class="rounded p-3 bg-cp d-xl-block position-absolute start-50 top-50 bottom-20 translate-middle" style="margin-bottom: 40%; ">
+      <div class="d-flex align-items-center">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+          <label class="form-check-label fw-bold fs-7" for="flexRadioDefault1">
+            Return
+          </label>
+        </div>
+        <div class="form-check mx-2">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked="">
+          <label class="form-check-label fw-bold fs-7" for="flexRadioDefault2">
+            One Way
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked="">
+          <label class="form-check-label fw-bold fs-7" for="flexRadioDefault2">
+            Multi-City
+          </label>
+        </div>
+        </div>
+        <div class="d-flex align-items-center py-2">
+          <div>
+            <label for="exampleDataList" class="form-label fw-bold fs-8 m-0">From</label>
+<input class="form-control inp-width inp-height" list="datalistOptions" id="exampleDataList" placeholder="Airport or City">
+<datalist id="datalistOptions">
+<option value="Mumbai">
+</option><option value="Delhi">
+</option><option value="Kolkatta">
+</option><option value="Banglore">
+</option><option value="Pune">
+</option></datalist>
+          </div>
+          <div>
+            <label for="exampleDataList1" class="form-label fw-bold fs-8 m-0">To</label>
+<input class="form-control inp-width inp-height" list="datalistOptions1" id="exampleDataList1" placeholder="Airport or City">
+<datalist id="datalistOptions1">
+<option value="Russia">
+</option><option value="Dubai">
+</option><option value="German">
+</option><option value="USA">
+</option><option value="Singapoor">
+</option></datalist>
+          </div>
+          <div>
+            <label for="" class="fw-bold fs-8">Depart</label>
+            <input type="date" name="" id="" class="form-control inp-height">
+          </div>
+          <div>
+            <label for="" class="fw-bold fs-8">Return</label>
+            <input type="date" name="" id="" class="form-control inp-height">
+          </div>
+          <div>
+            <label for="" class="fw-bold fs-8">Cabin class &amp; Travellers</label>
+            <select class="form-select inp-width inp-height" aria-label="Default select example">
+              <option selected="">Open this select menu</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+        </div>
+        <div class="d-flex align-items-center justify-content-between">
+          <div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked="">
+              <label class="form-check-label fw-bold fs-8" for="flexCheckDefault">
+                Add nearby airports
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+              <label class="form-check-label fw-bold fs-8" for="flexCheckChecked">
+                Direct flights only
+              </label>
+            </div>
+          </div>
+          <div class="btn btn-dark fw-bold btn-lg inp-width">Search Flights</div>
+        </div>
+      </div>
+
+  </div>
+
+ <div class="container">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 my-4"">
+    <div class="col">
+      <div class="card shadow-sm">
+        <img src="Images/Mumbai.jpg" width="100%" height="225">
+        <div class="card-body">
+          <p class="card-text">MUMBAI</p>
+          <p>to</p>
+          <P>SAN FARNCISCO</P>
+          <div class="d-flex justify-content-between align-items-center">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card shadow-sm">
+        <img src="Images/Mebourne.jpg" width="100%" height="225">
+        <div class="card-body"> 
+          <p class="card-text">DELHI</p>
+          <p>to</p>
+          <P>MEBOURNE</P>
+          <div class="d-flex justify-content-between align-items-center">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card shadow-sm">
+      <img src="Images/Delhi.jpg" width="100%" height="225">
+        <div class="card-body">
+          <p class="card-text">SAN FARNCISCO</p>
+          <p>to</p>
+          <P>MUMBAI</P>
+          <div class="d-flex justify-content-between align-items-center">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card shadow-sm">
+        <img src="Images/Sanfransico.jpg" width="100%" height="225">
+        <div class="card-body">
+          <p class="card-text">DELHI</p>
+          <P>to</P>
+          <P>SAN FARNCISCO</P>
+          <div class="d-flex justify-content-between align-items-center">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+ </div>
+
+ <footer class="bd-footer py-4 py-md-5 mt-5 bg-body-tertiary data-bs-ark">
+  <div class="container py-4 py-md-5 px-4 px-md-3 text-body-secondary">
+    <div class="row">
+      <div class="col-lg-3 mb-3">
+        <a class="d-inline-flex align-items-center mb-2 text-body-emphasis text-decoration-none" href="/" aria-label="Bootstrap">
+          <b><span class="fs-5">ABOUT US</span></b>
+        </a>
+        <ul class="list-unstyled small">
+          <li class="mb-2">Our new brand identity captures the esence of bold new India,marking a milestone in our transformation to become a word-class airline with an Indian heart.</li>
+          <li class="mb-2"></li>
+          <li class="mb-2">Aerofly Since 2024.</li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+        <h5>WHERE WE FLY</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="/">Route Map</a></li>
+          <li class="mb-2"><a href="/docs/5.3/">Nonstop Flights</a></li>
+          <li class="mb-2"><a href="https://icons.getbootstrap.com/">Popular Flights</a></li>
+          <li class="mb-2"><a href="https://themes.getbootstrap.com/">Partner Airlines</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 mb-3">
+        <h5>BOOK & MANAGE</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="/docs/5.3/getting-started/">Seatrch Flights</a></li>
+          <li class="mb-2"><a href="/docs/5.3/examples/starter-template/">Manage Booking</a></li>
+          <li class="mb-2"><a href="/docs/5.3/getting-started/webpack/">Flight Schedule</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 mb-3">
+        <h5>AEROFLY EXPERIENCE</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="https://github.com/twbs/bootstrap" target="_blank" rel="noopener">At The Airport</a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/bootstrap/tree/v4-dev" target="_blank" rel="noopener">In The Air</a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/icons" target="_blank" rel="noopener">Our Fleet</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 mb-3">
+        <h5>LOYALTY</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="https://github.com/twbs/bootstrap/issues" target="_blank" rel="noopener">About Flying Returns</a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/bootstrap/discussions" target="_blank" rel="noopener">Points Calculator</a></li>
+          <li class="mb-2"><a href="https://github.com/sponsors/twbs" target="_blank" rel="noopener">Earn Points</a></li>
+          <li class="mb-2"><a href="https://opencollective.com/bootstrap" target="_blank" rel="noopener">Spend Points</a></li>
+          <li class="mb-2"><a href="https://stackoverflow.com/questions/tagged/bootstrap-5" target="_blank" rel="noopener">Flying Returns FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-migrate-3.4.1.min.js" integrity="sha256-UnTxHm+zKuDPLfufgEMnKGXDl6fEIjtM+n1Q6lL73ok=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js" integrity="sha512-hCP3piYGSBPqnXypdKxKPSOzBHF75oU8wQ81a6OiGXHFMeKs9/8ChbgYl7pUvwImXJb03N4bs1o1DzmbokeeFw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  
+</body>
+</html>
